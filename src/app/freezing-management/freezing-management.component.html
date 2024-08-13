@@ -1,0 +1,37 @@
+<div class="form-container">
+    <h2>Cadastro de Período de Freezing</h2>
+
+    <form #freezingForm="ngForm" (ngSubmit)="onSubmit(freezingForm)">
+        <div class="form-group-inline">
+            <div class="form-group">
+                <label for="startDate">Data de Início:</label>
+                <input type="date" id="startDate" name="startDate" ngModel required>
+            </div>
+            <div class="form-group">
+                <label for="startTime">Hora de Início:</label>
+                <input type="time" id="startTime" name="startTime" ngModel required>
+            </div>
+        </div>
+
+        <div class="form-group-inline">
+            <div class="form-group">
+                <label for="endDate">Data de Término:</label>
+                <input type="date" id="endDate" name="endDate" ngModel required>
+            </div>
+            <div class="form-group">
+                <label for="endTime">Hora de Término:</label>
+                <input type="time" id="endTime" name="endTime" ngModel required>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="environment">Ambiente:</label>
+            <select id="environment" name="environment" ngModel required>
+                <option value="Banco">Banco</option>
+                <option value="Cartões">Cartões</option>
+            </select>
+        </div>
+
+        <button type="submit" [disabled]="freezingForm.invalid">Cadastrar Freezing</button>
+    </form>
+</div>

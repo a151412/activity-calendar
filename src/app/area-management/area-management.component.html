@@ -1,0 +1,29 @@
+<div class="form-container">
+    <h2>Gerenciamento de Áreas</h2>
+
+    <form #areaForm="ngForm" (ngSubmit)="onSubmit(areaForm)">
+        <div class="form-group">
+            <label for="areaName">Nome da Área:</label>
+            <input type="text" id="areaName" name="areaName" ngModel required>
+        </div>
+
+        <div class="form-group">
+            <label for="areaColor">Cor da Área:</label>
+            <input type="color" id="areaColor" name="areaColor" ngModel required>
+        </div>
+
+        <button type="submit" [disabled]="areaForm.invalid">Cadastrar Área</button>
+    </form>
+
+    <!-- Lista de Áreas Cadastradas (para edição e exclusão) -->
+    <div class="area-list">
+        <h3>Áreas Cadastradas</h3>
+        <ul>
+            <li *ngFor="let area of areas">
+                <span [style.color]="area.color">{{ area.name }}</span>
+                <button (click)="editArea(area)">Editar</button>
+                <button (click)="deleteArea(area)">Excluir</button>
+            </li>
+        </ul>
+    </div>
+</div>
