@@ -10,6 +10,7 @@ import { AreaManagementComponent } from './area-management/area-management.compo
 import { FreezingManagementComponent } from './freezing-management/freezing-management.component';
 import { HomeComponent } from './home/home.component';
 import { FullCalendarModule } from '@fullcalendar/angular';
+import { MenubarModule } from 'primeng/menubar';
 
 
 
@@ -28,6 +29,7 @@ import { FullCalendarModule } from '@fullcalendar/angular';
     FormsModule,
     AppRoutingModule,
     FullCalendarModule,
+    MenubarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

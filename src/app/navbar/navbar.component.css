@@ -63,3 +63,16 @@
 .nav-item.dropdown:hover .dropdown-menu {
     display: block;
 }
+/* Exemplo de personalização do menu
+.p-menubar {
+    background-color: #2c3e50;
+    border: none;
+}
+
+.p-menubar .p-menubar-root-list>.p-menubaritem>.p-menuitem-link {
+    color: #ffffff;
+}
+
+.p-menubar .p-menubar-root-list>.p-menubaritem>.p-menuitem-link:hover {
+    background-color: #34495e;
+} */
